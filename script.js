@@ -4,7 +4,9 @@ const london_clock = document.querySelector("#london");
 
 setInterval(() => {
   let date = new Date();
-  india_clock.textContent = date.toLocaleTimeString();
+  india_clock.textContent = date.toLocaleTimeString("en-US", {
+    timeZone: "Asia/Kolkata",
+  });
   dubai_clock.textContent = date.toLocaleTimeString("en-US", {
     timeZone: "Asia/Dubai",
   });
@@ -12,4 +14,3 @@ setInterval(() => {
     timeZone: "Europe/London",
   });
 }, 1000);
-
